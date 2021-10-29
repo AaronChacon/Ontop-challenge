@@ -1,0 +1,55 @@
+/* Typography
+   ========================================================================== */
+
+// fonts
+
+@font-face {
+  font-family: 'aileron';
+  src: url('../../fonts/aileron/aileron-bold-webfont.woff2') format('woff2'),
+        url('../../fonts/aileron/aileron-bold-webfont.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'aileron';
+    src: url('../../fonts/aileron/aileron-ultralight-webfont.woff2') format('woff2'),
+         url('../../fonts/aileron/aileron-ultralight-webfont.woff') format('woff');
+    font-weight: lighter;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'aileron';
+    src: url('../../fonts/aileron/aileron-regular-webfont.woff2') format('woff2'),
+         url('../../fonts/aileron/aileron-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+// fonts variables
+$typo-base: "aileron", sans-serif;
+
+
+body {
+   font-family: $typo-base !important;
+   font-style: bold;
+}
+
+a{
+   text-decoration: none;
+}
+
+.typo-normal{
+  font-weight: normal;
+}
+
+.typo-bold{
+  font-weight: bold;
+}
+
+.typo-lighter{
+  font-weight: lighter;
+}
