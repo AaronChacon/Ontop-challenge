@@ -1,13 +1,11 @@
 /*
-Typography
+Size
 ==========================================================================
 */
 
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;700;900&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap');
-
-$typo-base: "Manrope", sans-serif;
-$typo-code: 'Ubuntu Mono', monospace;
+html {
+  font-size: 62.5%;
+}
 
 /*
 Color
@@ -22,7 +20,10 @@ $secondary: #898989;
 
 $white: #FFFFFF;
 $grey: #888888;
+
 $gray-dark: #232323;
+$gray-depp: #202020;
+
 $dark: #000000;
 $dark-light: #1C0B11;
 
@@ -33,18 +34,6 @@ $shadow-navbar: 0px 4px 24px rgba(0, 0, 0, 0.08);
 $shadow-btn: 0px 4px 20px rgba(0, 0, 0, 0.25);
 $shadow-elements: 0px 4px 15px rgba(0, 0, 0, 0.1);
 
-/*
-Size
-==========================================================================
-*/
-
-$fz12: 0.75rem;
-$fz14: 0.875rem;
-$fz16: 1rem;
-$fz18: 1.125rem;
-$fz32: 32rem;
-
-
 
 /*
 theme rules
@@ -53,15 +42,24 @@ theme rules
 
 .light-theme {
     //base
-    --dark: #000000;
+    --base: $dark;
     --background-color: #F9F9F9;
-    --background-secondary: #F7FBFE;
+    --background-secondary: #FFFFFF;
 
-}
+    --primary: #FF5A70;
+    --secondary: #898989;
+
+    --line-primary: #C4C4C4;
+
+    --icon-filter-primary: invert(46%) sepia(98%) saturate(1265%) hue-rotate(317deg) brightness(99%) contrast(104%);
+    --icon-filter-secondary: invert(59%) sepia(2%) saturate(0%) hue-rotate(42deg) brightness(90%) contrast(92%);
+    --icon-filter-grey: invert(76%) sepia(0%) saturate(0%) hue-rotate(181deg) brightness(104%) contrast(82%);
+
+  }
 
 .dark-theme {
     //base
-    --dark: #FFFFFF;
+    --base: #FFFFFF;
     --background-color: #232323;
     --background-secondary: #202020;
 }

@@ -4,11 +4,16 @@
 @import 'base/breakpoints';
 @import 'base/typography';
 
-// 2. external
+// 2. layouts
+@import 'utilities/utilities';
+
+// 3. external
 @import 'externals/normalize';
 
-// 3. layouts
-@import 'layouts/contracts.scss';
-
 // 4. layouts
-//@import 'components/';
+@import 'layouts/contracts';
+
+// 5. components
+@import 'components/navbar';
+
+

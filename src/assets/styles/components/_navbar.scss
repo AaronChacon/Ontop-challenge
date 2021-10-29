@@ -1,3 +1,186 @@
+/* Navbar
+   ========================================================================== */
+
+
 .navbar{
-  min-height: 108px;
+  height: 10.8rem;
+  background-color: var(--background-secondary);
+  box-shadow: $shadow-navbar;
+  @include flexbox-center();
+  overflow: hidden;
+  @include small(){
+    height: 6.1rem;
+  }
+
+  &__container{
+    width: 90%;
+    @include flexbox-space-between();
+    @include large(){
+      width: 95%;
+    }
+  }
+
+  &__logo{
+    width: 20%;
+    :hover{
+      cursor: pointer;
+    }
+    .navbar__logo-img{
+      width: 14.9rem;
+      @include large(){
+        width: 10rem;
+      }
+      @include small(){
+        width: 7.9rem;
+      }
+    }
+    @include large(){
+      width: 15%;
+    }
+    @include small(){
+      width: auto;
+    }
+  }
+
+  &__menu{
+    height: 10.8rem;
+    width: 60%;
+    @include flexbox-space-around();
+    @include large(){
+      width: 70%;
+    }
+    @include medium(){
+      display: none;
+    }
+  }
+
+  &__item{
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    height: 10.8rem;
+    border-bottom: 0.6rem solid transparent;
+    transition: .4s ease-in-out;
+
+    &:hover{
+      cursor: pointer;
+      border-bottom: .6rem solid var(--primary);
+
+      .navbar__item-name{
+        color: var(--primary);
+      }
+      .navbar__item-icon,
+      .navbar__item-select{
+        filter: var(--icon-filter-primary);
+      }
+    }
+
+    .navbar__item-icon,
+    .navbar__item-select{
+      filter: var(--icon-filter-secondary)
+    }
+
+    .navbar__item-name{
+      font-size: 1.8rem;
+      line-height: 2.4rem;
+      font-weight: bold;
+      color: var(--secondary);
+      margin-left: 1rem;
+      margin-right: .7rem;
+      @include large(){
+        font-size: 1.5rem;
+        line-height: 2.1rem;
+      }
+    }
+
+  }
+
+  &__user{
+    width: 20%;
+    @include flexbox-center();
+    justify-content: flex-end;
+    @include large(){
+      width: 15%;
+    }
+    @include medium(){
+      display: none;
+    }
+
+    .navbar__user-line{
+      height: 45px;
+      background: var(--line-primary);
+      width: 1px;
+    }
+
+    .navbar__user-img {
+      width: 6.5rem;
+      height: 6.5rem;
+      border-radius: 50%;
+      margin-left: 4.0rem;
+      margin-right: 1.3rem;
+      &:hover{
+        cursor: pointer;
+      }
+
+      @include large(){
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        margin-left: 2.5rem;
+        margin-right: 1.3rem;
+      }
+
+    }
+
+    .navbar__user-select {
+      height: 1.0rem;
+      filter: var(--icon-filter-grey);
+      &:hover{
+        cursor: pointer;
+      }
+
+    }
+
+  }
+
+  &__mobile{
+    display: none;
+    @include medium(){
+      display: block;
+    }
+
+    .navbar__mobile-toggle{
+      @include flexbox-center();
+      flex-direction: column;
+      cursor: pointer;
+      transition: .3s;
+      &:active{
+        transform: scale(.95);
+      }
+
+      .navbar__mobile-icon{
+        height: .6rem;
+        width: 3.3rem;
+        background-color: var(--primary);
+        margin-bottom: .4rem;
+        @include small(){
+          height: .435rem;
+          width: 2.957rem;
+        }
+        &:last-child{
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    /* .navbar__mobile-section{
+
+    } */
+  }
+
+
+
+
+
 }
+

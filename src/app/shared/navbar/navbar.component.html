@@ -1,3 +1,57 @@
 <nav class="navbar">
+  <div class="navbar__container">
+    <div class="navbar__logo">
+      <img
+        class="navbar__logo-img"
+        [src]="logo"
+        alt="logo"
+      >
+    </div>
+    <div class="navbar__menu">
+      <div class="navbar__item" *ngFor="let item of menuInfo">
+        <img
+          class="navbar__item-icon"
+          [src]="item.icon"
+          [alt]="item.name"
+        >
+        <p class="navbar__item-name">
+          {{item.name}}
+        </p>
+        <img
+          class="navbar__item-select"
+          [src]="arrow_down"
+          [alt]="item.name"
+        >
+      </div>
+    </div>
+    <div class="navbar__user">
 
+      <div class="navbar__user-line"></div>
+
+      <img
+        class="navbar__user-img"
+        src="../../../assets/img/default/user.png"
+        alt=""
+      >
+
+      <img
+        class="navbar__user-select"
+        [src]="arrow_down"
+        alt=""
+      >
+
+    </div>
+    <div class="navbar__mobile">
+      <div class="navbar__mobile-toggle">
+        <span class="navbar__mobile-icon"></span>
+        <span class="navbar__mobile-icon"></span>
+        <span class="navbar__mobile-icon"></span>
+      </div>
+      <div class="navbar__mobile-section">
+        <div class="navbar__mobile-menu">
+          <!-- contend mobile menu -->
+        </div>
+      </div>
+    </div>
+  </div>
 </nav>
