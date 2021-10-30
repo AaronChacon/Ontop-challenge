@@ -42,24 +42,36 @@ theme rules
 
 .light-theme {
     //base
-    --base: $dark;
-    --background-color: #F9F9F9;
+    --base: #000000;
+    --background-primary: #F9F9F9;
     --background-secondary: #FFFFFF;
 
     --primary: #FF5A70;
     --secondary: #898989;
+    --brand-dark: #d84a5d;
+
+    --text-white: #FFFFFF;
+    --text-gray-dark: #1C0B11;
+    --text-gray-light: #EBEBEB;
+
+    --border-gray: #989B9B;
+
+    --shadow-btn: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    --shadow-card: 0 4px 6px -1px rgb(0 0 0 / 10%), 0 2px 4px -1px rgb(0 0 0 / 6%);
 
     --line-primary: #C4C4C4;
 
     --icon-filter-primary: invert(46%) sepia(98%) saturate(1265%) hue-rotate(317deg) brightness(99%) contrast(104%);
     --icon-filter-secondary: invert(59%) sepia(2%) saturate(0%) hue-rotate(42deg) brightness(90%) contrast(92%);
     --icon-filter-grey: invert(76%) sepia(0%) saturate(0%) hue-rotate(181deg) brightness(104%) contrast(82%);
+    --icon-filter-black: invert(0%) sepia(12%) saturate(7487%) hue-rotate(175deg) brightness(118%) contrast(100%);
+    --icon-filter-white: brightness(0) invert(1);
 
   }
 
 .dark-theme {
     //base
     --base: #FFFFFF;
-    --background-color: #232323;
+    --background-primary: #232323;
     --background-secondary: #202020;
 }

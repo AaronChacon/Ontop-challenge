@@ -1,0 +1,73 @@
+.button{
+
+  width: auto;
+  height: 5.8rem;
+  padding: 1.4rem 2.2rem;
+  @include flexbox-center();
+  color: var(--text-gray-dark);
+  background-color: var(--text-gray-light);
+  border-radius: .5rem;
+  overflow: hidden;
+  border: none;
+  transition: 0.4s ease-in-out;
+
+  &:hover{
+    cursor: pointer;
+  }
+
+  &:active{
+    transform: scale(0.95);
+  }
+
+  .button__icon{
+    width: 20px;
+    /* filter: var(--icon-filter-black); */
+    margin-right: .4rem;
+  }
+
+  .button__text{
+    font-size: 1.6rem;
+    line-height: 2.0rem;
+    letter-spacing: .025rem;
+    font-weight: bold;
+  }
+
+  &__primary{
+    background-color: var(--primary);
+    color: var(--text-white);
+    box-shadow: var(--shadow-btn);
+
+    &:hover{
+      background-color: var(--brand-dark);
+      border-color: var(--brand-dark);
+    }
+
+    .button__icon{
+      width: 1.67rem;
+    }
+    .button__text{
+      font-size: 1.8rem;
+      line-height: 2.4rem;
+    }
+  }
+
+  &__secondary{
+    background-color: var(--background-secondary);
+    color: var(--primary);
+    border: 1px solid var(--primary);
+
+    &:hover{
+      color: var(--text-white);
+      background-color: var(--brand-dark);
+      border-color: var(--brand-dark);
+      .button__icon{
+        filter: var(--icon-filter-white);
+      }
+    }
+
+    .button__icon{
+      width: 1.3rem;
+    }
+
+  }
+}

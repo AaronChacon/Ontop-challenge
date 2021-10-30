@@ -3,7 +3,7 @@
 
 
 .navbar{
-  height: 10.8rem;
+  height: 8.5rem;
   background-color: var(--background-secondary);
   box-shadow: $shadow-navbar;
   @include flexbox-center();
@@ -13,7 +13,7 @@
   }
 
   &__container{
-    width: 90%;
+    width: 91.3%;
     @include flexbox-space-between();
     @include large(){
       width: 95%;
@@ -43,7 +43,7 @@
   }
 
   &__menu{
-    height: 10.8rem;
+    height: 8.5rem;
     width: 60%;
     @include flexbox-space-around();
     @include large(){
@@ -58,7 +58,7 @@
     display: flex;
     align-items: center;
     box-sizing: border-box;
-    height: 10.8rem;
+    height: 8.5rem;
     border-bottom: 0.6rem solid transparent;
     transition: .4s ease-in-out;
 
@@ -75,13 +75,26 @@
       }
     }
 
+    &.active{
+      cursor: pointer;
+      border-bottom: .6rem solid var(--primary);
+      .navbar__item-icon,
+      .navbar__item-select{
+        filter: var(--icon-filter-primary)
+      }
+      .navbar__item-name{
+        color: var(--primary);
+      }
+
+    }
+
     .navbar__item-icon,
     .navbar__item-select{
       filter: var(--icon-filter-secondary)
     }
 
     .navbar__item-name{
-      font-size: 1.8rem;
+      font-size: 1.6rem;
       line-height: 2.4rem;
       font-weight: bold;
       color: var(--secondary);

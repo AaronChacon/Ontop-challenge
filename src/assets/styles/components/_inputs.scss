@@ -1,0 +1,51 @@
+.input__group{
+  @include flexbox-space-between();
+  background-color: var(--background-primary);
+  border-radius: .5rem;
+  height: 4rem;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+
+  .input {
+    height: 4rem;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    line-height: 1.44rem;
+    font-weight: normal;
+    margin-left: 1.2rem;
+    margin-right: 1.2rem;
+    color: var(--secondary);
+    background-color: var(--background-primary);
+
+
+    &::placeholder {
+      font-size: 1.2rem;
+      line-height: 1.44rem;
+      font-weight: normal;
+      color: var(--secondary);
+    }
+
+  }
+
+  .input__icon{
+    width: 2.0rem;
+    height: 4rem;
+    @include flexbox-center();
+    .icon{
+      filter: var(--icon-filter-grey);
+    }
+    &--left{
+      padding-left: 1.2rem;
+      .icon{
+        width: 1.8rem;
+      }
+    }
+    &--right{
+      padding-right: 1.2rem;
+      .icon{
+        width: 1rem;
+      }
+    }
+  }
+}

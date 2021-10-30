@@ -8,21 +8,23 @@
       >
     </div>
     <div class="navbar__menu">
-      <div class="navbar__item" *ngFor="let item of menuInfo">
-        <img
-          class="navbar__item-icon"
-          [src]="item.icon"
-          [alt]="item.name"
-        >
-        <p class="navbar__item-name">
-          {{item.name}}
-        </p>
-        <img
-          class="navbar__item-select"
-          [src]="arrow_down"
-          [alt]="item.name"
-        >
-      </div>
+      <ng-container *ngFor="let item of menuInfo">
+        <div class="navbar__item" [routerLink]="item.router" routerLinkActive="active">
+          <img
+            class="navbar__item-icon"
+            [src]="item.icon"
+            [alt]="item.name"
+          >
+          <p class="navbar__item-name">
+            {{item.name}}
+          </p>
+          <img
+            class="navbar__item-select"
+            [src]="arrow_down"
+            [alt]="item.name"
+          >
+        </div>
+      </ng-container>
     </div>
     <div class="navbar__user">
 
@@ -30,14 +32,14 @@
 
       <img
         class="navbar__user-img"
-        src="../../../assets/img/default/user.png"
-        alt=""
+        [src]="userImg"
+        alt="user-img"
       >
 
       <img
         class="navbar__user-select"
         [src]="arrow_down"
-        alt=""
+        alt="icon-arrow_down"
       >
 
     </div>

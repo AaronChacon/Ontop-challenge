@@ -1,5 +1,87 @@
 <div class="contracts">
   <ontop-navbar></ontop-navbar>
+  <div class="contracts__container">
 
+      <div class="contracts__info-title">
+
+        <h2 class="contracts__title">
+          Contracts for {{clientData[0].company}}
+        </h2>
+
+        <div class="contracts__box-btn">
+
+          <div class="input__group">
+            <div class="input__icon input__icon--left">
+              <img class="icon" [src]="search" alt="icon-filter">
+            </div>
+            <input type="text" placeholder="Seach" class="input input-primary">
+          </div>
+
+          <button class="button">
+            <img class="button__icon" [src]="iconFilter" alt="icon-filter">
+            <span class="button__text">
+              Filter
+            </span>
+          </button>
+          <button class="button button__primary">
+            <img class="button__icon" [src]="iconPlus" alt="icon-plus">
+            <span class="button__text">
+              New hire
+            </span>
+          </button>
+        </div>
+
+      </div>
+
+      <div class="contracts__card">
+        <div class="card card__primary">
+          <div class="card__contracts-filter-inputs">
+            <div class="input__group">
+              <div class="input__icon input__icon--left">
+                <img class="icon" [src]="calendar" alt="icon-filter">
+              </div>
+              <select class="input input-primary">
+                <option selected>Create on: Jan/10/21 - Jan/28/21</option>
+                <option value="1">value</option>
+              </select>
+            </div>
+            <div class="input__group">
+              <select class="input input-primary">
+                <option selected>Contract type</option>
+                <option value="1">Traditional</option>
+              </select>
+            </div>
+            <div class="input__group">
+              <input
+                type="text"
+                class="input input-primary"
+                placeholder="Contractor Name"
+              >
+            </div>
+            <div class="input__group">
+              <select class="input input-primary">
+                <option selected>Status</option>
+                <option value="1">Active</option>
+                <option value="1">Signature pending</option>
+              </select>
+            </div>
+          </div>
+          <div class="card__contracts-filter-btn">
+
+            <button class="button button__secondary">
+              <img class="button__icon" [src]="trash" alt="icon-plus">
+              <span class="button__text">
+                Clear filters
+              </span>
+            </button>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="contracts__table">
+
+      </div>
+  </div>
 </div>
 
