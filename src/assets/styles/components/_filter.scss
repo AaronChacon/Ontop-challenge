@@ -1,15 +1,13 @@
-.filter{
-
-  &__header{
+.filter {
+  &__header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     /* border-bottom: .1rem solid var(--border-gray-light); */
     padding-bottom: 1.5rem;
 
-    .filter__header-info{
-
-      .filter__title{
+    .filter__header-info {
+      .filter__title {
         margin: 0;
         font-size: 14px;
         line-height: 19px;
@@ -18,7 +16,7 @@
         color: var(--secondary);
       }
 
-      .filter__subtitle{
+      .filter__subtitle {
         margin: 0;
         font-size: 1.1rem;
         line-height: 1.6rem;
@@ -28,51 +26,65 @@
       }
     }
 
-    .filter__header-button{
+    .filter__header-button {
       display: flex;
       align-items: center;
-      .button__secondary{
-        height: 4rem;
-        margin-left: auto;
-        padding: 1.4rem;
-        font-size: 1.4rem;
+      width: 46%;
+
+      .input__group {
+        margin-bottom: 0;
+        margin-right: 1rem;
+        width: 100%;
+        justify-content: flex-start;
+        display: none;
+        @include medium(){
+          display: flex;
+        }
         @include small(){
           display: none;
         }
       }
-    }
 
+      .button__secondary {
+        height: 4rem;
+        margin-left: auto;
+        padding: 1.4rem;
+        font-size: 1.4rem;
+        @include small() {
+          display: none;
+        }
+      }
+    }
   }
 
-  &__content-inputs{
+  &__content-inputs {
     width: 100%;
     flex-wrap: wrap;
     @include flexbox-space-between();
-    .input__group{
+    .input__group {
       width: 23%;
-      @include medium(){
+      @include medium() {
         width: 46%;
       }
-      @include small(){
+      @include small() {
         width: 100%;
       }
-      .input{
+      .input {
         width: 100%;
       }
     }
   }
-  &__content-btn{
+  &__content-btn {
     width: 100%;
-    .button__secondary{
+    .button__secondary {
       height: 4rem;
       margin-left: auto;
       display: none;
-      @include small(){
+      @include small() {
         display: block;
         width: 100%;
         height: 5rem;
       }
     }
   }
-
 }

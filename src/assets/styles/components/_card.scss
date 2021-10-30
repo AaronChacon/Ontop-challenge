@@ -1,8 +1,8 @@
-.card{
+.card {
   width: 100%;
   margin-top: 3rem;
   //min-height: 15rem;
-  border-radius: .4rem;
+  border-radius: 0.4rem;
   padding: 2.4rem 1.2rem;
   position: relative;
   overflow: hidden;
@@ -10,7 +10,115 @@
   box-shadow: var(--shadow-card);
   background-color: var(--background-secondary);
 
-  &__primary{
+  &__primary {
     border-left: 4px solid var(--primary);
+  }
+}
+
+.card-description {
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+
+    .header__user {
+      display: flex;
+      align-items: center;
+
+      .header__user-img {
+        width: 4.1rem;
+        height: 4.1rem;
+        margin-right: 1.5rem;
+        border-radius: 50%;
+      }
+
+      .header__user-info {
+        .header__user-title {
+          font-size: 1.4rem;
+          line-height: 2.4rem;
+          font-weight: bold;
+        }
+      }
+    }
+
+    .header__options {
+      .dropdown__icon {
+        font-size: 2.4rem;
+      }
+    }
+  }
+
+  &__main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 1.4rem;
+    padding-left: 1.4rem;
+    padding-right: 1.4rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--border-gray-light);
+
+    .description__item {
+      width: 50%;
+      display: flex;
+      min-height: 5.5rem;
+      padding: 0 2rem;
+      margin-bottom: 1.4rem;
+      justify-content: center;
+      box-sizing: border-box;
+      flex-direction: column;
+      background: var(--background-primary);
+
+      @include small() {
+        width: 100%;
+        min-height: 3.7rem;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 0.5rem;
+        border-radius: 0.5rem;
+
+        &:nth-child(odd) {
+          background: var(--background-primary);
+        }
+
+        &:nth-child(even) {
+          background: var(--background-secondary);
+        }
+      }
+
+      .item__key {
+        font-size: 12px;
+        line-height: 20px;
+        color: var(--base);
+        font-weight: bold;
+        margin: 0;
+        @include small() {
+          width: 50%;
+        }
+      }
+
+      .item__value {
+        font-size: 12px;
+        line-height: 20px;
+        color: var(--text-gray-middl);
+        font-weight: normal;
+        margin: 0;
+        @include small() {
+          width: 50%;
+        }
+      }
+
+      .table__status {
+        width: 50%;
+        height: 1.9rem;
+        margin: 0;
+
+        .table__status-text{
+          font-size: .8rem;
+          line-height: .96rem;
+        }
+      }
+    }
   }
 }

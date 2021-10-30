@@ -63,7 +63,7 @@
           height: 5rem;
           width: 10rem;
           .button__icon{
-            width: 1.5rem;
+            font-size: 1.5rem;
           }
           .button__text{
             font-size: 1.4rem;
@@ -100,7 +100,7 @@
           width: 16rem;
           height: 5rem;
           .button__icon{
-            width: 1.4rem;
+            font-size: 1.4rem;
           }
           .button__text{
             font-size: 1.6rem;
@@ -163,7 +163,20 @@
 
     .contracts__search{
       margin-top: 3.2rem;
+    }
 
+    .contracts__table{
+      display: block;
+      @include medium(){
+        display: none;
+      }
+    }
+
+    .contracts__cards-mobile {
+      display: none;
+      @include medium(){
+        display: block;
+      }
     }
 
   }

@@ -12,19 +12,19 @@
 
           <div class="input__group">
             <div class="input__icon input__icon--left">
-              <img class="icon" [src]="search" alt="icon-filter">
+              <i class="icon-search icon"></i>
             </div>
             <input type="text" placeholder="Seach" class="input input-primary">
           </div>
 
           <button class="button">
-            <img class="button__icon" [src]="iconFilter" alt="icon-filter">
+            <i class="icon-filter button__icon"></i>
             <span class="button__text">
               Filter
             </span>
           </button>
           <button class="button button__primary">
-            <img class="button__icon" [src]="iconPlus" alt="icon-plus">
+            <i class="icon-plus button__icon"></i>
             <span class="button__text">
               New hire
             </span>
@@ -32,6 +32,8 @@
         </div>
 
       </div>
+
+      <!-- <ontop-card></ontop-card> -->
 
       <div class="contracts__card">
         <div class="card card__primary">
@@ -44,6 +46,24 @@
           <ontop-table></ontop-table>
         </div>
       </div>
+
+      <div class="contracts__cards-mobile" >
+
+        <ng-container *ngFor="let contractor of clientData[0].contracts" >
+
+          <div class="card card__primary">
+            <ontop-card-description
+            [contractorData]="contractor"
+            ></ontop-card-description>
+          </div>
+
+        </ng-container>
+
+
+
+      </div>
+
+
   </div>
 </div>
 

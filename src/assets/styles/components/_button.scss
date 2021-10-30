@@ -20,8 +20,7 @@
   }
 
   .button__icon{
-    width: 20px;
-    /* filter: var(--icon-filter-black); */
+    font-size: 20px;
     margin-right: .4rem;
   }
 
@@ -43,7 +42,7 @@
     }
 
     .button__icon{
-      width: 1.67rem;
+      font-size: 1.67rem;
     }
     .button__text{
       font-size: 1.8rem;

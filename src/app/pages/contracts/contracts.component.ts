@@ -1,6 +1,6 @@
 import { Component, OnInit, Inject, Renderer2 } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
-import { ITheme } from 'src/app/core/interfaces/basic.interfaces';
+import { ClientData, ITheme } from 'src/app/core/interfaces/basic.interfaces';
 
 
 @Component({
@@ -13,25 +13,39 @@ export class ContractsComponent implements OnInit {
   theme: ITheme = 'light-theme';
   iconFilter:string = 'assets/img/icons/filter.svg';
   iconPlus:string = 'assets/img/icons/plus.svg';
-  arrow_down:string = 'assets/img/icons/arrow_down.svg';
-  trash:string = 'assets/img/icons/trash.svg';
-  search:string = 'assets/img/icons/search.svg';
-  calendar:string = 'assets/img/icons/calendar.svg';
 
-
-  clientData: any[] = [
+  clientData: ClientData[] = [
     {
+      id: 1,
       company: 'Ontop',
       contracts: [
         {
           id: 1,
-          imgUrl: '',
-          name: 'Darlene Robertson',
-          type: 'traditional',
-          start_date: 23/10/2020,
-          amount:  200,
-          status: 'active'
-        }
+          contractorName: 'Darlene Robertson',
+          imgUrl: 'assets/img/default/user.png',
+          type: 'Traditional',
+          startDate: 'Mar 4, 2021',
+          amount: 200,
+          status: 'active',
+        },
+        {
+          id: 2,
+          contractorName: 'Darlene Robertson',
+          imgUrl: 'assets/img/default/user1.png',
+          type: 'Traditional',
+          startDate: 'Mar 4, 2021',
+          amount: 200,
+          status: 'signature pending',
+        },
+        {
+          id: 3,
+          contractorName: 'Darlene Robertson',
+          imgUrl: 'assets/img/default/user2.png',
+          type: 'Traditional',
+          startDate: 'Mar 4, 2021',
+          amount: 1200,
+          status: 'active',
+        },
       ],
     },
   ]
@@ -41,7 +55,9 @@ export class ContractsComponent implements OnInit {
   constructor(
     @Inject(DOCUMENT) private document: Document,
     private renderer: Renderer2,
-  ) { }
+  ) {
+
+  }
 
   ngOnInit(): void {
     this.initializeTheme();

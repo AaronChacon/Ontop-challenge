@@ -1,0 +1,60 @@
+<div class="card-description">
+  <div class="card-description__header">
+    <div class="header__user">
+
+      <img
+        class="header__user-img"
+        [src]="contractorData.imgUrl"
+        alt="user"
+      >
+
+      <div class="header__user-info">
+        <small class="header__user-title">
+          {{contractorData.contractorName}}
+        </small>
+      </div>
+    </div>
+
+    <div class="header__options">
+      <ontop-dropdown></ontop-dropdown>
+    </div>
+  </div>
+
+  <div class="card-description__main">
+    <div class="description__item">
+      <p class="item__key">Type</p>
+      <p class="item__value">
+        {{contractorData.type}}
+      </p>
+    </div>
+    <div class="description__item">
+      <p class="item__key">Start date</p>
+      <p class="item__value">
+        {{contractorData.startDate}}
+      </p>
+    </div>
+    <div class="description__item">
+      <p class="item__key">Amount</p>
+      <p class="item__value">
+        ${{contractorData.amount}} USD
+      </p>
+    </div>
+    <div class="description__item">
+      <p class="item__key">Status</p>
+      <div class="item__value">
+
+        <div class="table__status table__status--active" [ngClass]="{
+          'table__status--active': contractorData.status === 'active',
+          'table__status--pending': contractorData.status === 'signature pending'
+          }">
+          <i class="table__status-icon icon-point"></i>
+          <span class="table__status-text">
+            {{contractorData.status}}
+          </span>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</div>
