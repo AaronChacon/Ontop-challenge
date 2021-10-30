@@ -1,0 +1,15 @@
+.dropdown{
+
+  &__button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__icon{
+    font-size: 3.5rem;
+    color: var(--line-primary);
+  }
+
+
+}

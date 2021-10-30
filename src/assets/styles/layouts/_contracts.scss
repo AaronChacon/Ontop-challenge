@@ -7,8 +7,8 @@
   &__container{
     width: 74.86%;
     margin: 0 auto;
-    margin-top: 6rem;
-    margin-bottom: 6rem;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
     @include small(){
       width: 90%;
     }

@@ -1,0 +1,24 @@
+<div class="dropdown">
+  <button class="dropdown__button" mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+    <mat-icon class="dropdown__icon">more_vert</mat-icon>
+  </button>
+
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>
+      <mat-icon>border_color</mat-icon>
+      <span>Edit</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>notifications_off</mat-icon>
+      <span>Sign</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>description</mat-icon>
+      <span>View Summary</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>delete</mat-icon>
+      <span>Delete</span>
+    </button>
+  </mat-menu>
+</div>
