@@ -9,6 +9,12 @@
     margin: 0 auto;
     padding-top: 6rem;
     padding-bottom: 6rem;
+    @include large(){
+      width: 82.5%;
+    }
+    @include medium(){
+      width: 85%;
+    }
     @include small(){
       width: 90%;
     }

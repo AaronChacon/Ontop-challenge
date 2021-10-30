@@ -33,7 +33,8 @@
     height: 4rem;
     @include flexbox-center();
     .icon{
-      filter: var(--icon-filter-grey);
+      color: var(--icon-gray-light);
+      font-size: 1.8rem;
     }
     &--left{
       padding-left: 1.2rem;

@@ -1,0 +1,23 @@
+.mat-paginator-outer-container,
+.mat-form-field{
+  font-family: $typo-base;
+}
+
+.mat-form-field{
+  &.mat-focused{
+    .mat-form-field-ripple {
+      font-family: $typo-base;
+      background-color: var(--primary);
+    }
+  }
+}
+
+.mat-primary .mat-option.mat-selected:not(.mat-option-disabled) {
+  color:  var(--primary);
+  font-family: $typo-base;
+}
+
+.mat-form-field.mat-focused.mat-primary .mat-select-arrow {
+  color:  var(--primary);
+  font-family: $typo-base;
+}

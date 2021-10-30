@@ -1,3 +1,43 @@
+.table__header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: .1rem solid var(--border-gray-light);
+  padding-bottom: 1.5rem;
+
+  .table__header-info{
+
+    .header__title{
+      margin: 0;
+      font-size: 14px;
+      line-height: 19px;
+      font-family: $typo-base;
+      text-transform: uppercase;
+      color: var(--secondary);
+    }
+
+    .header__subtitle{
+      margin: 0;
+      font-size: 1.1rem;
+      line-height: 1.6rem;
+      font-family: $typo-base;
+      text-transform: capitalize;
+      color: var(--secondary);
+    }
+  }
+
+  .table__header-search{
+    display: flex;
+    align-items: center;
+    width: 23%;
+    .input__group{
+      width: 100%;
+      margin-bottom: 0;
+    }
+  }
+
+}
+
 table {
   width: 100%;
   box-shadow: none;
@@ -16,6 +56,47 @@ table {
       font-size: 1.4rem;
       line-height: 2.4rem;
       color: var(--text-gray-middle);
+    }
+  }
+
+  .table__status{
+    width: 80%;
+    height: 2.4rem;
+    margin: 0 auto;
+    padding: 0 1.1rem;
+    border-radius: 2.0rem;
+    @include flexbox-start();
+    background-color: var(--text-gray-light);
+
+    &.table__status--active{
+      background-color: var(--status-active-opacity);
+      .table__status-icon,
+      .table__status-text{
+        color: var(--status-active);
+      }
+
+    }
+
+    &.table__status--pending{
+      background-color: var(--status-pending-opacity);
+      .table__status-icon,
+      .table__status-text{
+        color: var(--status-pending);
+      }
+    }
+
+    .table__status-icon{
+      font-size: .5rem;
+      color: var(--text-gray-middle);
+      margin-right: .7rem;
+    }
+
+    .table__status-text{
+      font-size: 1rem;
+      line-height:1.2rem;
+      color: var(--text-gray-middle);
+      font-weight: bold;
+      text-transform: capitalize;
     }
   }
 
@@ -63,7 +144,7 @@ table {
   th {
     &.mat-header-cell {
       text-align: center;
-      background-color: white;
+      background-color: var(--background-primary);
     }
   }
 
@@ -82,5 +163,5 @@ table {
   font-weight: bolder;
   font-size: 16px;
   line-height: 20px;
-  color: black;
+  color: var(--base);
 }

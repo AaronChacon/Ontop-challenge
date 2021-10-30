@@ -1,5 +1,6 @@
 // 1. base
 @import 'base/variables';
+@import 'base//icons';
 @import 'base/theme';
 @import 'base/breakpoints';
 @import 'base/typography';
@@ -20,5 +21,7 @@
 @import 'components/inputs';
 @import 'components/table';
 @import 'components/dropdown';
+@import 'components/paginator';
+@import 'components/filter';
 
 

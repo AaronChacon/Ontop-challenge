@@ -8,13 +8,17 @@ import { MaterialModule } from 'src/app/material/material.module';
 import { ContractsComponent } from './contracts.component';
 import { TableComponent } from 'src/app/components/table/table.component';
 import { DropdownComponent } from 'src/app/components/dropdown/dropdown.component';
+import { PaginatorComponent } from 'src/app/components/paginator/paginator.component';
+import { FilterComponent } from 'src/app/components/filter/filter.component';
 
 
 @NgModule({
   declarations: [
     ContractsComponent,
     TableComponent,
-    DropdownComponent
+    DropdownComponent,
+    PaginatorComponent,
+    FilterComponent
   ],
   imports: [
     CommonModule,

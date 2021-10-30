@@ -61,12 +61,12 @@
       background-color: var(--brand-dark);
       border-color: var(--brand-dark);
       .button__icon{
-        filter: var(--icon-filter-white);
+        color: var(--text-white);
       }
     }
 
     .button__icon{
-      width: 1.3rem;
+      font-size: 1.3rem;
     }
 
   }

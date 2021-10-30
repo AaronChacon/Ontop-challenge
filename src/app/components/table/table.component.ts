@@ -9,7 +9,7 @@ export interface ContractsList {
   type: string;
   startDate: string;
   amount: number;
-  status: boolean;
+  status: string;
 }
 
 const ELEMENT_DATA: ContractsList[] = [
@@ -20,16 +20,25 @@ const ELEMENT_DATA: ContractsList[] = [
     type: 'Traditional',
     startDate: 'Mar 4, 2021',
     amount: 200,
-    status: true,
+    status: 'active',
   },
   {
     id: 2,
     contractorName: 'Darlene Robertson',
-    imgUrl: 'assets/img/default/user.png',
+    imgUrl: 'assets/img/default/user1.png',
     type: 'Traditional',
     startDate: 'Mar 4, 2021',
     amount: 200,
-    status: false,
+    status: 'signature pending',
+  },
+  {
+    id: 3,
+    contractorName: 'Darlene Robertson',
+    imgUrl: 'assets/img/default/user2.png',
+    type: 'Traditional',
+    startDate: 'Mar 4, 2021',
+    amount: 1200,
+    status: 'active',
   },
 ];
 
