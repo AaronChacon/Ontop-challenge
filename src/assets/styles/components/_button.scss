@@ -69,4 +69,41 @@
     }
 
   }
+
+  &__support{
+
+    background-color: var(--primary);
+    width: 7.9rem;
+    height: 7.9rem;
+    border-radius: 50%;
+    box-shadow: var(--shadow-btn);
+    @include flexbox-center();
+    position: fixed;
+    bottom: 6.8rem;
+    right: 6.8rem;
+
+    @include medium() {
+      bottom: 2.4rem;
+      right: 2.4rem;
+    }
+
+    &:hover{
+      cursor: pointer;
+    }
+
+    &:active{
+      transition: 0.4s ease-in-out;
+      transform: scale(0.95);
+    }
+
+    .support__icon{
+      color: var(--text-white);
+      font-size: 4rem;
+    }
+
+  }
+
+
+
+
 }

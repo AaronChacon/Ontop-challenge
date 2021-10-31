@@ -12,6 +12,7 @@ import { PaginatorComponent } from 'src/app/components/paginator/paginator.compo
 import { FilterComponent } from 'src/app/components/filter/filter.component';
 import { CardComponent } from 'src/app/components/card/card.component';
 import { CardDescriptionComponent } from 'src/app/components/card-description/card-description.component';
+import { SupportButtonComponent } from 'src/app/components/support-button/support-button.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { CardDescriptionComponent } from 'src/app/components/card-description/ca
     DropdownComponent,
     PaginatorComponent,
     FilterComponent,
-    CardDescriptionComponent
+    CardDescriptionComponent,
+    SupportButtonComponent
   ],
   imports: [
     CommonModule,
