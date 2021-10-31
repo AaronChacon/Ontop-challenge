@@ -1,6 +1,9 @@
 import { Component, Inject, OnInit, Renderer2 } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { ITheme } from 'src/app/core/interfaces/basic.interfaces';
+import { Menu } from '../../core/interfaces/basic.interfaces';
+
+
 @Component({
   selector: 'ontop-navbar',
   templateUrl: './navbar.component.html',
@@ -8,12 +11,12 @@ import { ITheme } from 'src/app/core/interfaces/basic.interfaces';
 })
 export class NavbarComponent implements OnInit {
 
-  logo:string = 'assets/img/default/logo.png';
-  userImg:string = 'assets/img/default/user.png';
-  theme: ITheme = 'dark-theme';
+  logo: string = 'assets/img/default/logo.png';
+  userImg: string = 'assets/img/default/user.png';
+  theme: ITheme = 'light-theme';
   menu: boolean = true;
 
-  menuInfo:any = [
+  menuInfo: Menu[] = [
     {
       icon: 'icon-user',
       name:'Contracts',
@@ -36,9 +39,6 @@ export class NavbarComponent implements OnInit {
     }
   ]
 
-  userSelect:any = [
-  ]
-
   constructor(
     @Inject(DOCUMENT) private document: Document,
     private renderer: Renderer2,
@@ -59,6 +59,10 @@ export class NavbarComponent implements OnInit {
         ? (this.theme = 'dark-theme')
         : (this.theme = 'light-theme')
     );
+  }
+
+  switchMenu(){
+    this.menu === true ? this.menu = false : this.menu = true;
   }
 
 }

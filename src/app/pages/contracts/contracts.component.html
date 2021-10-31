@@ -3,7 +3,6 @@
   <div class="contracts__container">
 
       <div class="contracts__info-title">
-
         <h2 class="contracts__title">
           Contracts for {{clientData[0].company}}
         </h2>
@@ -30,10 +29,7 @@
             </span>
           </button>
         </div>
-
       </div>
-
-      <!-- <ontop-card></ontop-card> -->
 
       <div class="contracts__card">
         <div class="card card__primary">
@@ -43,12 +39,11 @@
 
       <div class="contracts__table">
         <div class="card card__primary">
-          <ontop-table></ontop-table>
+          <ontop-table [dataSource]="clientData[0].contracts"></ontop-table>
         </div>
       </div>
 
-      <div class="contracts__cards-mobile" >
-
+      <div class="contracts__cards-mobile">
         <ng-container *ngFor="let contractor of clientData[0].contracts" >
 
           <div class="card card__primary">
@@ -58,9 +53,6 @@
           </div>
 
         </ng-container>
-
-
-
       </div>
 
 

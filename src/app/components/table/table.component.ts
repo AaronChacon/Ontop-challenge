@@ -1,18 +1,9 @@
-import {AfterViewInit, Component, ViewChild} from '@angular/core';
+import {Component, Input} from '@angular/core';
+import { Contractor } from 'src/app/core/interfaces/basic.interfaces';
 
 
 
-export interface ContractsList {
-  id: number;
-  contractorName: string;
-  imgUrl: string;
-  type: string;
-  startDate: string;
-  amount: number;
-  status: string;
-}
-
-const ELEMENT_DATA: ContractsList[] = [
+/* const ELEMENT_DATA: Contractor[] = [
   {
     id: 1,
     contractorName: 'Darlene Robertson',
@@ -40,7 +31,7 @@ const ELEMENT_DATA: ContractsList[] = [
     amount: 1200,
     status: 'active',
   },
-];
+]; */
 
 
 @Component({
@@ -51,9 +42,11 @@ const ELEMENT_DATA: ContractsList[] = [
 export class TableComponent {
 
   displayedColumns: string[] = ['contractorName', 'type', 'startDate', 'amount', 'status', 'actions'];
-  dataSource = ELEMENT_DATA;
+  @Input() dataSource: Contractor[] = [];
 
-  constructor() {}
+  constructor() {
+
+  }
 
 
 

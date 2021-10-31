@@ -15,3 +15,9 @@ export interface ClientData {
   company: string;
   contracts: Contractor[];
 }
+
+export interface Menu {
+  icon: string;
+  name: string;
+  router: string;
+}

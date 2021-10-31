@@ -39,17 +39,64 @@
       <i class="icon-arrow-down navbar__user-select"></i>
     </div>
 
+
     <div class="navbar__mobile">
-      <div class="navbar__mobile-toggle">
+      <div class="navbar__mobile-toggle" (click)="switchMenu()">
         <span class="navbar__mobile-icon"></span>
         <span class="navbar__mobile-icon"></span>
         <span class="navbar__mobile-icon"></span>
-      </div>
-      <div class="navbar__mobile-section">
-        <div class="navbar__mobile-menu">
-          <!-- contend mobile menu -->
-        </div>
       </div>
     </div>
   </div>
 </nav>
+
+<div class="navbar__mobile-menu" [ngClass]="{'active': !menu}">
+
+  <div class="navbar__close" (click)="switchMenu()">
+    <i class="icon-plus icon"></i>
+  </div>
+
+  <div class="mobile__menu-logo">
+    <img
+    class="navbar__logo-img"
+    [src]="logo"
+    alt="logo"
+    >
+  </div>
+
+  <div class="mobile__menu-items">
+    <ng-container *ngFor="let item of menuInfo">
+      <div class="navbar__item" [routerLink]="item.router" routerLinkActive="active">
+        <i
+          class="navbar__item-icon"
+          ngClass="{{item.icon}}"
+        ></i>
+        <p class="navbar__item-name">
+          {{item.name}}
+        </p>
+        <i
+          class="navbar__item-icon icon-arrow-down"
+        ></i>
+      </div>
+    </ng-container>
+  </div>
+
+  <div class="mobile__menu-user">
+    <div class="navbar__user">
+
+      <i
+        class="icon-sun navbar__user-icon-theme"
+        (click)="switchThemes()"
+      ></i>
+
+      <div class="navbar__user-line"></div>
+      <img
+        class="navbar__user-img"
+        [src]="userImg"
+        alt="user-img"
+      >
+      <i class="icon-arrow-down navbar__user-select"></i>
+    </div>
+  </div>
+
+</div>
