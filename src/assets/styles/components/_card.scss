@@ -38,6 +38,7 @@
           font-size: 1.4rem;
           line-height: 2.4rem;
           font-weight: bold;
+          color: var(--base);
         }
       }
     }
@@ -101,7 +102,7 @@
       .item__value {
         font-size: 12px;
         line-height: 20px;
-        color: var(--text-gray-middl);
+        color: var(--base);
         font-weight: normal;
         margin: 0;
         @include small() {

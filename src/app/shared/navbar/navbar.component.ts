@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { RouterLinkActive } from '@angular/router';
+import { Component, Inject, OnInit, Renderer2 } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { ITheme } from 'src/app/core/interfaces/basic.interfaces';
 @Component({
   selector: 'ontop-navbar',
   templateUrl: './navbar.component.html',
@@ -8,37 +9,56 @@ import { RouterLinkActive } from '@angular/router';
 export class NavbarComponent implements OnInit {
 
   logo:string = 'assets/img/default/logo.png';
-  arrow_down:string = '../../../assets/img/icons/arrow_down.svg';
-  userImg:string = '../../../assets/img/default/user.png';
+  userImg:string = 'assets/img/default/user.png';
+  theme: ITheme = 'dark-theme';
+  menu: boolean = true;
 
   menuInfo:any = [
     {
-      icon: '../../../assets/img/icons/user.svg',
+      icon: 'icon-user',
       name:'Contracts',
       router: '/contracts'
     },
     {
-      icon: '../../../assets/img/icons/document.svg',
+      icon: 'icon-document',
       name:'Documents',
       router: '/documents'
     },
     {
-      icon: '../../../assets/img/icons/pay.svg',
+      icon: 'icon-pay',
       name:'Payout',
       router: '/payout'
     },
     {
-      icon: '../../../assets/img/icons/calendar.svg',
+      icon: 'icon-calendar',
       name:'Time',
       router: '/time'
     }
   ]
+
   userSelect:any = [
   ]
 
-  constructor() { }
+  constructor(
+    @Inject(DOCUMENT) private document: Document,
+    private renderer: Renderer2,
+  ) { }
 
   ngOnInit(): void {
+    this.initializeTheme();
+  }
+
+  initializeTheme(): void {
+    this.renderer.addClass(this.document.body, this.theme);
+  }
+
+  switchThemes(){
+    this.document.body.classList.replace(
+      this.theme,
+      this.theme === 'light-theme'
+        ? (this.theme = 'dark-theme')
+        : (this.theme = 'light-theme')
+    );
   }
 
 }
