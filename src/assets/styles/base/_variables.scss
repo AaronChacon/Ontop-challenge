@@ -54,6 +54,7 @@ theme rules
     --text-white: #FFFFFF;
     --text-gray-dark: #1C0B11;
     --text-gray-middle: #3B3B3B;
+    --text-gray-drop: #3B3B3B;
     --text-gray-light: #EBEBEB;
     --text-table: #202020;
 
@@ -67,6 +68,7 @@ theme rules
 
     --border-gray: #989B9B;
     --border-gray-light: #EBEBEB;
+    --border-dropdown: transparent;
 
     --shadow-btn: 0px 4px 20px rgba(0, 0, 0, 0.25);
     --shadow-card: 0 4px 6px -1px rgb(0 0 0 / 10%), 0 2px 4px -1px rgb(0 0 0 / 6%);
@@ -89,6 +91,7 @@ theme rules
     --text-white: #fff;
     --text-gray-dark: #1C0B11;
     --text-gray-middle: #3B3B3B;
+    --text-gray-drop: #BEBEBE;
     --text-gray-light: #EBEBEB;
     --text-table: #202020;
 
@@ -102,6 +105,7 @@ theme rules
 
     --border-gray: #989B9B;
     --border-gray-light: #EBEBEB;
+    --border-dropdown: #EBEBEB;
 
     --shadow-btn: 0px 4px 20px rgba(216,74,93,0.25);
     --shadow-card: 0 4px 6px -1px rgb(216, 74, 93 / 10%), 0 2px 4px -1px rgb(216, 74, 93 / 6%);

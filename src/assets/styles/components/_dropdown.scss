@@ -11,14 +11,16 @@
   }
 
   &__menu {
-    background: #ffffff;
+    background: var(--background-secondary);
     mix-blend-mode: normal;
     box-shadow: 0px 4px 15px rgb(0 0 0 / 10%);
+    border: 1px solid var(--border-dropdown);
 
     .dropdown__menu-icon{
       i{
         font-size: 1.4rem;
-        color: #DADADA;
+        //color: #DADADA;
+        color: var(--icon-gray-light);
         padding-left: .4rem;
         padding-right: 1rem;
       }
@@ -32,7 +34,7 @@
     .dropdown__menu-text{
       font-size: 1.4rem;
       line-height: 2.4rem;
-      color: #3B3B3B;
+      color: var(--text-gray-drop);
     }
   }
 }
@@ -55,14 +57,14 @@
     padding: 1.2rem 0;
     line-height: normal;
     font-family: $typo-base;
-    border-bottom: .1rem solid #ebebeb;
+    border-bottom: .1rem solid var(--border-gray-light);
 
     &:last-child{
       border-bottom: 1px solid transparent;
     }
 
     &:hover:not([disabled]){
-      background: white
+      background: transparent
     }
   }
 }
