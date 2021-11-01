@@ -1,19 +1,19 @@
-.mat-paginator{
-  background-color:  var(--background-table);
+.mat-paginator {
+  background-color: var(--background-table);
   color: var(--base);
 }
 
-.mat-select-value{
+.mat-select-value {
   color: var(--base);
 }
 
 .mat-paginator-outer-container,
-.mat-form-field{
+.mat-form-field {
   font-family: $typo-base;
 }
 
-.mat-form-field{
-  &.mat-focused{
+.mat-form-field {
+  &.mat-focused {
     .mat-form-field-ripple {
       font-family: $typo-base;
       background-color: var(--primary);
@@ -22,11 +22,21 @@
 }
 
 .mat-primary .mat-option.mat-selected:not(.mat-option-disabled) {
-  color:  var(--primary);
+  color: var(--primary);
   font-family: $typo-base;
 }
 
 .mat-form-field.mat-focused.mat-primary .mat-select-arrow {
-  color:  var(--primary);
+  color: var(--primary);
   font-family: $typo-base;
+}
+
+.mat-select-panel {
+  background: var(--background-table);
+  border: 1px solid var(--border-dropdown);
+  box-shadow: var(--shadow-card);
+
+  .mat-option {
+    color: var(--base);
+  }
 }

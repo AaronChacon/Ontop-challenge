@@ -71,6 +71,16 @@
       flex-direction: column;
       background: var(--background-primary);
 
+      &:nth-child(odd) {
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+      }
+
+      &:nth-child(even) {
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+
       @include small() {
         width: 100%;
         min-height: 3.7rem;
