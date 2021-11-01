@@ -1,77 +1,74 @@
-.button{
-
+.button {
   width: auto;
   height: 5.8rem;
   padding: 1.4rem 2.2rem;
   @include flexbox-center();
   color: var(--text-gray-dark);
   background-color: var(--text-gray-light);
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   overflow: hidden;
   border: none;
   transition: 0.4s ease-in-out;
 
-  &:hover{
+  &:hover {
     cursor: pointer;
   }
 
-  &:active{
+  &:active {
     transform: scale(0.95);
   }
 
-  .button__icon{
+  .button__icon {
     font-size: 20px;
-    margin-right: .4rem;
+    margin-right: 0.4rem;
   }
 
-  .button__text{
+  .button__text {
     font-size: 1.6rem;
-    line-height: 2.0rem;
-    letter-spacing: .025rem;
+    line-height: 2rem;
+    letter-spacing: 0.025rem;
     font-weight: bold;
   }
 
-  &__primary{
+  &__primary {
     background-color: var(--primary);
     color: var(--text-white);
     box-shadow: var(--shadow-btn);
 
-    &:hover{
+    &:hover {
       background-color: var(--brand-dark);
       border-color: var(--brand-dark);
     }
 
-    .button__icon{
+    .button__icon {
       font-size: 1.67rem;
     }
-    .button__text{
+    .button__text {
       font-size: 1.8rem;
       line-height: 2.4rem;
     }
   }
 
-  &__secondary{
+  &__secondary {
     background-color: var(--background-secondary);
     color: var(--primary);
     border: 1px solid var(--primary);
 
-    &:hover{
+    &:hover {
       color: var(--text-white);
       background-color: var(--brand-dark);
       border-color: var(--brand-dark);
-      .button__icon{
+      .button__icon {
         color: var(--text-white);
       }
     }
 
-    .button__icon{
+    .button__icon {
       font-size: 1.3rem;
     }
-
   }
 
-  &__support{
-
+  &__support {
     width: 7.9rem;
     height: 7.9rem;
     border-radius: 50%;
@@ -87,23 +84,28 @@
       right: 2.4rem;
     }
 
-    &:hover{
+    @include small() {
+      bottom: 6rem;
+      right: 2.4rem;
+      width: 7rem;
+      height: 7rem;
+    }
+
+    &:hover {
       cursor: pointer;
     }
 
-    &:active{
+    &:active {
       transition: 0.4s ease-in-out;
       transform: scale(0.95);
     }
 
-    .support__icon{
+    .support__icon {
       color: var(--text-white);
       font-size: 4rem;
+      @include small() {
+        font-size: 3.5rem;
+      }
     }
-
   }
-
-
-
-
 }

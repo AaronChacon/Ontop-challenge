@@ -66,7 +66,10 @@
 
   <div class="mobile__menu-items">
     <ng-container *ngFor="let item of menuInfo">
-      <div class="navbar__item" [routerLink]="item.router" routerLinkActive="active">
+      <div class="navbar__item"
+        [routerLink]="item.router"
+        routerLinkActive="active"
+        (click)="switchMenu()">
         <i
           class="navbar__item-icon"
           ngClass="{{item.icon}}"
@@ -87,6 +90,7 @@
       <i
         class="icon-sun navbar__user-icon-theme"
         (click)="switchThemes()"
+        (click)="switchMenu()"
       ></i>
 
       <div class="navbar__user-line"></div>

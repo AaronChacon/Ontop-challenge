@@ -4,148 +4,147 @@
 .contracts {
   background-color: var(--background-primary);
 
-  &__container{
+  &__container {
+    position: relative;
     width: 74.86%;
     margin: 0 auto;
     padding-top: 6rem;
     padding-bottom: 6rem;
-    @include large(){
+    @include large() {
       width: 82.5%;
     }
-    @include medium(){
+    @include medium() {
       width: 85%;
+      padding-bottom: 9rem;
     }
-    @include small(){
+    @include small() {
       width: 90%;
     }
 
-    .contracts__info-title{
+    .contracts__info-title {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      @include small(){
+      @include small() {
         justify-content: center;
         flex-direction: column;
       }
     }
 
-    .contracts__title{
+    .contracts__title {
       margin: 0;
       font-size: 3.6rem;
       line-height: 4.2rem;
       font-weight: bold;
       color: var(--base);
 
-      @include large(){
+      @include large() {
         font-size: 3rem;
         line-height: 3.8rem;
       }
-      @include medium(){
+      @include medium() {
         font-size: 2.4rem;
         line-height: 3.6rem;
       }
-
     }
 
-    .contracts__box-btn{
+    .contracts__box-btn {
       display: flex;
       align-items: center;
-      @include small(){
-
+      @include small() {
         width: 100%;
         margin-top: 4.5rem;
         flex-direction: column;
       }
 
-      .button{
+      .button {
         width: 11.1rem;
         margin-right: 1.8rem;
-        @include large(){
+        @include large() {
           height: 5rem;
           width: 10rem;
-          .button__icon{
+          .button__icon {
             font-size: 1.5rem;
           }
-          .button__text{
+          .button__text {
             font-size: 1.4rem;
           }
         }
-        @include medium(){
+        @include medium() {
           width: auto;
-          .button__icon{
+          .button__icon {
             margin-right: 0;
           }
-          .button__text{
+          .button__text {
             display: none;
           }
         }
-        @include small(){
+        @include small() {
           width: 100%;
           height: 5.5rem;
           margin-right: 0;
           margin-bottom: 1.5rem;
-          .button__icon{
-            margin-right: .4rem;
+          .button__icon {
+            margin-right: 0.4rem;
           }
-          .button__text{
+          .button__text {
             display: flex;
           }
         }
-
       }
 
-      .button__primary{
+      .button__primary {
         width: 19.2rem;
         margin-right: 0;
-        @include large(){
+        @include large() {
           width: 16rem;
           height: 5rem;
-          .button__icon{
+          .button__icon {
             font-size: 1.4rem;
           }
-          .button__text{
+          .button__text {
             font-size: 1.6rem;
           }
         }
-        @include medium(){
+        @include medium() {
           width: auto;
-          .button__icon{
+          .button__icon {
             margin-right: 0;
           }
-          .button__text{
+          .button__text {
             display: none;
           }
         }
-        @include small(){
+        @include small() {
           width: 100%;
           height: 5.5rem;
           margin-right: 0;
           margin-bottom: 0;
-          .button__icon{
-            margin-right: .4rem;
+          .button__icon {
+            margin-right: 0.4rem;
           }
-          .button__text{
+          .button__text {
             display: flex;
           }
         }
       }
 
-      .input__group{
+      .input__group {
         width: 100%;
         background-color: var(--background-secondary);
-        border: .05rem solid var(--border-gray);
+        border: 0.05rem solid var(--border-gray);
         height: 5rem;
         display: none;
 
-        @include small(){
+        @include small() {
           display: flex;
         }
 
-        .input__icon{
+        .input__icon {
           height: 5rem;
         }
 
-        .input-primary{
+        .input-primary {
           width: 100%;
           background-color: var(--background-secondary);
           height: 5rem;
@@ -156,30 +155,44 @@
             font-size: 1.6rem;
             line-height: 2.4rem;
           }
-
         }
       }
-
     }
 
-    .contracts__search{
+    .contracts__search {
       margin-top: 3.2rem;
     }
 
-    .contracts__table{
+    .contracts__table {
       display: block;
-      @include medium(){
+      @include medium() {
         display: none;
       }
     }
 
     .contracts__cards-mobile {
       display: none;
-      @include medium(){
+      @include medium() {
         display: block;
       }
     }
 
-  }
+    .contracts__paginator-mobile {
+      /* margin-top: 5.0rem; */
+      position: fixed;
+      display: none;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      right: 0;
 
+      @include medium() {
+        display: block;
+      }
+
+      .mat-paginator-container{
+        justify-content: center;
+      }
+    }
+  }
 }
